@@ -1,7 +1,9 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; 
+//to use any papckages, they need to be identified in pubspec.yaml
 
-void main() { //Void is return type, main is function name, inside {} is function body
-  runApp(const MyApp());
+//void is return type, main is function name, inside {} is function body
+void main() { //defining a function
+  runApp(const MyApp()); //excuting (calling) a function
 }
 
 // With Flutter, you create user interfaces by combining "widgets"
