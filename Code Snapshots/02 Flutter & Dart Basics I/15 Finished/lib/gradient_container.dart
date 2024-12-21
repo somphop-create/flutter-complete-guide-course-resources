@@ -5,7 +5,7 @@ import 'package:basics/dice_roller.dart';
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
-class GradientContainer extends StatelessWidget {
+class GradientContainer extends StatelessWidget { //1 add logic from Statelesswidget to MyApp class
   const GradientContainer(this.color1, this.color2, {super.key});
 
   const GradientContainer.purple({super.key})
@@ -15,8 +15,10 @@ class GradientContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
 
-  @override
-  Widget build(context) {
+  @override //3 Make it clear we are
+  Widget build(context) { //2 build method (function) is required for building custom widget
+                          //Widget is a return value type of this build function
+                          //Context parameter is needed here to address the widget position
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
