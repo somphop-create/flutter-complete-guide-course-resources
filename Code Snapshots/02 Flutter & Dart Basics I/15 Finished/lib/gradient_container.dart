@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:basics/dice_roller.dart';
 
-const startAlignment = Alignment.topLeft;
+//declare variable here for convenience
+//variables should be const not var because these values here should not be change thereafter
+//and the values are constant values which can be loged-in at the complie time
+const startAlignment = Alignment.topLeft; 
 const endAlignment = Alignment.bottomRight;
+//Alighment? startAlignment; means variable accept either alignment type or null
+//but cannot be used here since 'begin' cannot accept null
 
 class GradientContainer extends StatelessWidget { //1 add logic from Statelesswidget to MyApp class
   const GradientContainer(this.color1, this.color2, {super.key}); //Initialization
