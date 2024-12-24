@@ -19,6 +19,7 @@ class GradientContainer extends StatelessWidget { //1 add logic from Statelesswi
   const GradientContainer.purple({super.key})
       : color1 = Colors.deepPurple,
         color2 = Colors.indigo;
+  //optional way to use constructor function widget.nameofconstructorfunction 
 
   final Color color1;
   final Color color2;
