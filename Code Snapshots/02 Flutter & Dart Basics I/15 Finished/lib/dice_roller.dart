@@ -16,7 +16,8 @@ class DiceRoller extends StatefulWidget {
 class _DiceRollerState extends State<DiceRoller> {
   var currentDiceRoll = 2;
 
-  void rollDice() {
+  void rollDice() { //function that will be called later within build method 
+                    //return void because onPressed wants void as a return type
     setState(() {
       currentDiceRoll = randomizer.nextInt(6) + 1;
     });
@@ -24,16 +25,16 @@ class _DiceRollerState extends State<DiceRoller> {
 
   @override
   Widget build(context) {
-    return Column(
+    return Column( //add column widget to display content vertically
       mainAxisSize: MainAxisSize.min,
-      children: [
-        Image.asset(
+      children: [ //children is properties of column widget
+        Image.asset( //Image is a built.in widget and has asset as a default constructor
           'assets/images/dice-$currentDiceRoll.png',
           width: 200,
         ),
         const SizedBox(height: 20),
         TextButton(
-          onPressed: rollDice,
+          onPressed: rollDice, //rollDice function as a value, don't exacute but point to that function
           style: TextButton.styleFrom(
             // padding: const EdgeInsets.only(
             //   top: 20,
